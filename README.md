@@ -9,7 +9,7 @@ Alunos:
 
 
 ## Objetivo
-Nosso objetivo é planejar e implementar a arquitetura de dados orientada a eventos proposta nesta solution sprint.
+Nosso objetivo é explicar e demonstrar a implementação da arquitetura de dados orientada a eventos proposta nesta solution sprint.
 
 ## Índice
 
