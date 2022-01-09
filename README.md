@@ -1,6 +1,6 @@
 # Solution Sprint 3
 
-Repositório criado para a solution sprint 3 do curso de engenharia de dados (4ABDO). 
+Repositório criado para a solution sprint 3 do curso de Engenharia de Dados. 
 
 Alunos:
 * Alessandro Bezerra
