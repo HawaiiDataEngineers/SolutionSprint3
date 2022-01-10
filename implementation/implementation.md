@@ -73,16 +73,25 @@ Criar outra fila, raw-json-dlq para DLQ.
 <img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/raw_json_dlq.png"></img>
 
 ## 2.3 Criar Lambda de prepação dos dados para criação dos pacotes no Kinesis
+Crie uma lambda chamada lb_read_from_output_sqs e adicione o gatilho para pasta /uploads/output, para o evento ObjectCreatedbyPut. 
 
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lb_read_from_output_sqs.png"></img>
+
+Por fim na parte de código inclua o conteúdo do script [lb_read_from_output_sqs.py](https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lb_read_from_output_sqs.py)
 
 # Parte 3: Criação dos pacotes Kinesis em external tables no Athena e dos pacotes parquet
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/solution_sprint_3_architect_part_3.png"></img>
 
 ## 3.1 Criação do Kinesis
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/kinesis_ingested_json.png"></img>
 
 ## 3.2 Validação da criação do pacote no S3
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/s3_ingested-json.png"></img>
 
 ## 3.3 Leitura dos dados no Athena
 
+
+## 3.4 Criação dos arquivos parquet
 
 
 
