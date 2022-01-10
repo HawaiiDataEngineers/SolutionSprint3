@@ -21,7 +21,8 @@ Crie uma lambda chamada lbd_csv_to_json
 Configure o bucket S3 como gatilho para ser ativado na criação de qualquer arquivo no bucket, clicando no botão **Adicionar Gatilho**
 <img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/trigger_config.png"></img>
 
-Na parte de código coloque os comandos contido no script [lbd_csv_to_json.py](https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lbd_csv_to_json.py)
+Na parte de código coloque os comandos contidos no script [lbd_csv_to_json.py](https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lbd_csv_to_json.py)
+
 <img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lambda_code.png"></img>
 
 ## 1.4 Realizar o upload dos arquivos .csv do Cloud9 para o bucket S3
@@ -44,17 +45,40 @@ Acesse o bucket e veja se os arquivos estão lá.
 <img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/upload_files.png"></img>
 
 ## 1.6 Ver  no cloud watch, se a lambda lbd_csv_to_json foi ativada
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/cloud_watch_lbd_csv_to_json.png"></img>
 
 ## 1.7 Criar lambda de conversão dos arquivos csv em json
+Crie uma lamdba chamada lbd_sqs contendo o script [lbd_sqs.py](https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lbd_sqs.py)
 
 ## 1.8 Criar SQS com saída para a lambda de conversão
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/sqs_small-files-csv-2.png"></img>
 
-## 1.9 Validar a criação dos arquivos json
+## 1.9 Criar SQS com saída para ser utilizada com DLQ
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/sqs_small-files-csv-dlq.png"></img>
 
-# Preparação para criação dos pacotes no Kinesis a partir dos arquivos json
+## 1.10 Validar a criação dos arquivos json
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/output_json.png"></img>
+
+# Parte 2: Preparação para criação dos pacotes no Kinesis a partir dos arquivos json
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/solution_sprint_3_architect_part_2.png"></img>
+## 2.1 Criação da lambda de leitura dos arquivos json
+Crie lambda com gatilho para a pasta outpu do S3, chamada lb_read_from_output_sqs contendo o script [lb_read_from_output_sqs.py](https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lb_read_from_output_sqs.py)
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lbd_read_from_output_sqs.png"></img>
+
+## 2.2 Criar SQS para envio das informações que irão criar o pacote no Kinesis 
+Crie uma fila SQS que receberá o bucket e o nome das keys contidas na pasta output e outra fila para DLQ.
+
+## 2.3 Criar Lambda de prepação dos dados para criação dos pacotes no Kinesis
 
 
-# Criação dos pacotes Kinesis em external tables no Athena e dos pacotes parquet
+# Parte 3: Criação dos pacotes Kinesis em external tables no Athena e dos pacotes parquet
+
+## 3.1 Criação do Kinesis
+
+## 3.2 Validação da criação do pacote no S3
+
+## 3.3 Leitura dos dados no Athena
+
 
 
 
