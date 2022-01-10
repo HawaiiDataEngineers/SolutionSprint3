@@ -66,7 +66,11 @@ Crie lambda com gatilho para a pasta outpu do S3, chamada lb_read_from_output_sq
 <img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/lbd_read_from_output_sqs.png"></img>
 
 ## 2.2 Criar SQS para envio das informações que irão criar o pacote no Kinesis 
-Crie uma fila SQS que receberá o bucket e o nome das keys contidas na pasta output e outra fila para DLQ.
+Crie uma fila SQS denominada raw-json que receberá o bucket e o nome das keys contidas na pasta output. 
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/raw_json.png"></img>
+
+Criar outra fila, raw-json-dlq para DLQ.
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/raw_json_dlq.png"></img>
 
 ## 2.3 Criar Lambda de prepação dos dados para criação dos pacotes no Kinesis
 
