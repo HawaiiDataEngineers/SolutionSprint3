@@ -89,9 +89,9 @@ Por fim na parte de código inclua o conteúdo do script [lb_read_from_output_sq
 <img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/s3_ingested-json.png"></img>
 
 ## 3.3 Leitura dos dados no Athena
-
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/athena.png"></img>
 
 ## 3.4 Criação dos arquivos parquet
-
+<img src="https://github.com/HawaiiDataEngineers/SolutionSprint3/blob/main/implementation/parquet.png"></img>
 
 
